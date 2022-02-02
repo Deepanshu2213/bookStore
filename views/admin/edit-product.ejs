@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add-Product</title>
+    <link rel="stylesheet" href="/css/product.css">
+</head>
+<body>
+  <%- include('../navi/navigation.ejs') %>
+  <main>
+      <form action="/admin/edit-product" method="POST">
+        <div class="form">
+            <div class="align">
+              <label for="title">Title</label><br>
+              <input type="text" value="<%= product.title %>" name="title" class="input"/><br>
+              <label for="imageUrl">Image url</label><br>
+              <input type="text" value="<%= product.imageUrl %>" name="imageUrl" class="input"/><br>
+              <label for="price">Price</label><br>
+              <input type="text" value="<%= product.price %>" name="price" class="input"/><br>
+              <label for="description">Description</label><br>
+              <textarea name="description"  rows="5"><%= product.description %> </textarea><br>
+              <button type="submit" class="button"><% if(editing){ %> Edit<%} else {%>Add<%  } %></button>
+              <input type="hidden" value="<%=product.id%>" name="productId">
+            </div>
+        </div>
+    
+        </form>
+    </main>  
+</body>
+</html>

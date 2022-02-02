@@ -1,0 +1,137 @@
+
+body{
+    padding: 0;
+    margin: 0;
+    
+}
+nav ul{
+    margin: 0;
+}
+ul li{
+
+display: inline;
+align-items: center;
+padding: 10px;
+text-decoration: none;
+line-height: 3.5rem;
+
+}
+ul li a{
+color: white;
+text-decoration: none;
+}
+
+ul li:hover{
+    margin-left: 20px;
+    font-size: 23px; 
+color: white;
+transition: all 0.5s;
+
+}
+ul li a:hover{
+   
+color: rgb(255, 255, 25);
+
+
+}
+.active{
+color: yellow;
+}
+.list{
+background-color: rgb(11, 133, 62);
+}
+.card-container{
+    width: 300px;
+    height: 500px;
+    color: rgb(41, 41, 41);
+    border-radius: 20px;
+   
+    margin-top: 20px;
+   
+    box-shadow: rgba(22, 17, 17, 0.239) 0px 3px 8px;
+    cursor: default;
+     }
+     .card-container:hover{
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+        transition: all 0.4s;
+     }
+    .card-image{
+        align-items: center;
+        width: 300px;
+        height: 180px;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    .image{
+        
+        width: 300px;
+        height: 150px;
+       
+    }
+    .card-title{
+        margin-bottom: 28px;
+         margin: 0;
+       opacity: 0.9;
+       padding: 10px;
+    }
+    p{
+        margin: 0;
+        
+        
+    }
+    *{
+        font-family: "Helvetica Neue";
+        font-weight: 400;
+        
+    
+    }
+    .card-content{
+        margin-bottom: 80px;
+    }
+    .card-button{
+       
+        border: solid 1px rgb(11, 133, 62);
+        height: 2rem;
+        width: 200px;
+        border-radius: 50px;
+        background-color: white;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 19px;
+        font-style: Open Sans;
+       margin-left: 40px;
+       margin-top: 10px;
+        
+    
+    }
+    .card-button:hover{
+        color: white;
+        background-color: rgb(11, 133, 62);
+        transition: all 0.4s;
+        
+    }
+    p{
+        padding: 10px;
+      
+    }
+    .card-heading{
+        opacity: 0.8;
+       margin-left: 24%;
+       text-transform: uppercase;
+    }
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.tnt{
+    text-decoration: none;
+    color: rgb(41, 41, 41);
+    
+}
+.card-button:hover .tnt{
+    color: white;
+    transition: 0.4s;
+}

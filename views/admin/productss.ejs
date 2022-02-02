@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+ 
+        
+    </style>
+</head>
+<body>
+    <%- include('../navi/navigation.ejs') %>
+    <main>
+        <% if (prods.length>0) {   %>
+       <div class="container">
+           <% for(let products of prods) { %>
+         <div class="card-container">
+            <h2 class="card-heading"><%= products.title %></h2>
+             <div class="card-image">
+              <img src= "<%= products.imageUrl %>" class="image">
+             </div>
+             <div class="card titles">
+              <h2 class="card-title"> PRICE : <%= products.price %></h2>
+              <p><%= products.description %>
+                </p>
+                
+               <button class="card-button" ><a href="/admin/edit-product/<%=  products.id %>?edit=true" class="tnt">Edit </a></button> 
+               <%=/* %>  <form action="admin/edit-product/<%=  products.id %>?edit=true" method="GET">
+              <button class="card-button" >Edit</button>
+             </form> <%= form not working for query */ %>
+             <form action="/admin/delete-product" method="POST">
+                <button class="card-button" >Delete </button>
+                <input type="hidden" value="<%= products.id %>" name="productId">
+            </form>
+            </div>
+        </div>
+        <% } %>
+        </div>
+        <% } else{ %>
+            <h1>Product Not Found</h1>
+    <% } %>
+</main>  
+
+</body>
+</html>
+       
+       

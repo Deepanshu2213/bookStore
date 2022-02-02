@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+ 
+        
+    </style>
+</head>
+<body>
+    <%- include('../navi/navigation.ejs') %>
+    <main>
+        <% if (prods.length>0) {   %>
+       <div class="container">
+           <% for(let products of prods) { %>
+         <div class="card-container">
+            <h2 class="card-heading"><%= products.title %></h2>
+             <div class="card-image">
+              <img src= "<%= products.imageUrl %>" class="image">
+             </div>
+             <div class="card titles">
+              <h2 class="card-title"><%= products.price %></h2>
+              <p><%= products.description %>
+                </p>
+                <%- include('../navi/add-to-cart.ejs',{product: products}) %>
+            </form>
+                <form action="/product/<%=products.id  %>" method="GET">
+                    <button class="card-button" type="submit">Details</button>
+                    </form>
+            </div>
+        </div>
+        <% } %>
+        </div>
+        <% } else{ %>
+            <h1>Product Not Found</h1>
+    <% } %>
+</main>  
+
+</body>
+</html>
