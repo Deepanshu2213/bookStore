@@ -105,4 +105,8 @@ const getProductsFromFile = cb => {
         
     });
      }
+     static updateProduct(id){
+      var products = this.fetchAll();
+      
+     }
  } 
